@@ -3,6 +3,8 @@ import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
+import Account from "./pages/Account";
+import Payment from "./pages/Payment";
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
           <div className="p-6 overflow-y-auto">
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/accounts" element={<Account/>}/>
+              <Route path="/payments" element={ <Payment/>}/>
             </Routes>
           </div>
         </div>

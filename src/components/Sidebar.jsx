@@ -1,4 +1,7 @@
 import { FiMenu } from "react-icons/fi";
+import { AiOutlineDashboard } from "react-icons/ai";
+import {FiUsers, FiCreditCard} from "react-icons/fi";
+
 
 export default function Sidebar({ isOpen, toggle }) {
     return (
@@ -13,20 +16,37 @@ export default function Sidebar({ isOpen, toggle }) {
                     <button className="mb-8 p-3 text-xl" onClick={toggle}>
                         <FiMenu />
                     </button>
-                </div>
+                </div>             
 
+                <nav className="space-y-2">
+                    <a
+                        href="/"
+                        className="group flex items-center gap-3 py-2 px-3 rounded
+               text-gray-300 hover:bg-gray-700 hover:text-white transition"
+                    >
+                        <AiOutlineDashboard className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                        <span>Dashboard</span>
+                    </a>
 
-                <nav className="space-y-4">
-                    <a href="/" className="block py-2 px-3 rounded hover:bg-gray-700">
-                        Dashboard
+                    <a
+                        href="accounts"
+                        className="group flex items-center gap-3 py-2 px-3 rounded
+               text-gray-300 hover:bg-gray-700 hover:text-white transition"
+                    >
+                        <FiUsers className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                        <span>Accounts</span>
                     </a>
-                    <a href="#" className="block py-2 px-3 rounded hover:bg-gray-700">
-                        Accounts
-                    </a>
-                    <a href="#" className="block py-2 px-3 rounded hover:bg-gray-700">
-                        Payments
+
+                    <a
+                        href="payments"
+                        className="group flex items-center gap-3 py-2 px-3 rounded
+               text-gray-300 hover:bg-gray-700 hover:text-white transition"
+                    >
+                        <FiCreditCard className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                        <span>Payments</span>
                     </a>
                 </nav>
+
             </div>
         </>
     );
